@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Big Boy Cafe - Rewari</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background: #fff8f0;
+    color: #4b3b2b;
+  }
+  header, footer {
+    background-color: #704214;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+  nav {
+    background: #a6692f;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 1em 0;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 1em;
+  }
+  h1, h2 {
+    color: #5b3a00;
+  }
+  .intro, .vibe, .best-dishes {
+    margin-bottom: 2em;
+  }
+  .best-dishes ul {
+    list-style-type: square;
+    margin-left: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+  }
+  table, th, td {
+    border: 1px solid #a67c22;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #d3b87d;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .gallery img {
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .contact-info {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+    }
+    .gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Big Boy Cafe & Party Hall</h1>
+  <p>Link Road, above Sector 4, Sector 4, Rewari, Haryana 123401</p>
+</header>
+
+<nav>
+  <a href="#home" onclick="showPage('home')">Home</a>
+  <a href="#menu" onclick="showPage('menu')">Menu</a>
+  <a href="#about" onclick="showPage('about')">About</a>
+  <a href="#gallery" onclick="showPage('gallery')">Gallery</a>
+  <a href="#contact" onclick="showPage('contact')">Contact</a>
+</nav>
+
+<div class="container">
+
+  <section id="home" class="page-section">
+    <h2>Welcome to Big Boy Cafe</h2>
+    <div class="intro">
+      <p><strong>Big Boy Cafe & Party Hall</strong> is the finest venue to have a private party and enjoy with your closest friends and family.</p>
+    </div>
+    <div class="vibe">
+      <p>Our customer service team is excellent. When it comes to timely responses and helpful assistance, the team here excels. The cafe provides a wonderful ambience with ample space for parking. Whether you visit for food or to celebrate an event, Big Boy Cafe is the place to be!</p>
+    </div>
+    <div class="best-dishes">
+      <h3>Our Best Dishes</h3>
+      <ul>
+        <li><strong>Burger:</strong> Paneer Burger, Pizza Burger</li>
+        <li><strong>Momos:</strong> Mix Veg. Fried Momos, Paneer Fry Momos</li>
+        <li><strong>Shakes:</strong> Chocolate Shake, Oreo Shake</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="menu" class="page-section" style="display:none;">
+    <h2>Menu</h2>
+    <table>
+      <tr><th>Category</th><th>Item</th><th>Price (₹)</th></tr>
+
+      <!-- Burger -->
+      <tr><td rowspan="6">Burger</td><td>Aloo Tikki Burger</td><td>50</td></tr>
+      <tr><td>Vegetable Tikki Burger</td><td>60</td></tr>
+      <tr><td>Paneer Burger</td><td>80</td></tr>
+      <tr><td>Cheeze Burger</td><td>80</td></tr>
+      <tr><td>Pizza Burger</td><td>110</td></tr>
+      <tr><td>Combo (Aloo Tikki Burger + Coldrinks + French Fries)</td><td>180</td></tr>
+
+      <!-- Fries -->
+      <tr><td rowspan="4">Fries</td><td>French Fries</td><td>80</td></tr>
+      <tr><td>Fries Salted</td><td>90</td></tr>
+      <tr><td>Cheeze Fries</td><td>120</td></tr>
+      <tr><td>Masala Fries</td><td>100</td></tr>
+
+      <!-- Noodles -->
+      <tr><td rowspan="4">Noodles</td><td>Hakka Noodles</td><td>110</td></tr>
+      <tr><td>Vegetables Noodles</td><td>100</td></tr>
+      <tr><td>Butter Noodles</td><td>120</td></tr>
+      <tr><td>Singapuri Noodles</td><td>150</td></tr>
+
+      <!-- Pasta -->
+      <tr><td rowspan="2">Pasta</td><td>White Sauce Pasta</td><td>150</td></tr>
+      <tr><td>Red Sauce Pasta</td><td>150</td></tr>
+
+      <!-- Wraps -->
+      <tr><td rowspan="5">Wraps</td><td>Mix Vegetables Roll</td><td>100</td></tr>
+      <tr><td>Noodles Roll</td><td>80</td></tr>
+      <tr><td>Vegetable Sticks</td><td>130</td></tr>
+      <tr><td>Garlic Bowl</td><td>130</td></tr>
+      <tr><td>Potato Sticks</td><td>120</td></tr>
+
+      <!-- Coffee -->
+      <tr><td rowspan="4">Coffee</td><td>Cold Coffee</td><td>110</td></tr>
+      <tr><td>Chocolate Cold Coffee</td><td>120</td></tr>
+      <tr><td>Vanilla Cold Coffee</td><td>100</td></tr>
+      <tr><td>Hot Coffee</td><td>30</td></tr>
+
+      <!-- Manchurian -->
+      <tr><td rowspan="4">Manchurian</td><td>Veg Manchurian Dry</td><td>120</td></tr>
+      <tr><td>Veg Manchurian Gravy</td><td>140</td></tr>
+      <tr><td>Paneer Manchurian Dry</td><td>150</td></tr>
+      <tr><td>Paneer Manchurian Gravy</td><td>160</td></tr>
+
+      <!-- Momos -->
+      <tr><td rowspan="3">Momos</td><td>Mix Veg. Fried Momos</td><td>100</td></tr>
+      <tr><td>Mix Veg. Kurkure Momos</td><td>120</td></tr>
+      <tr><td>Paneer Fry Momos</td><td>120</td></tr>
+
+      <!-- Chilly Potato -->
+      <tr><td rowspan="2">Chilly Potato</td><td>Classic Chilly Potato</td><td>120</td></tr>
+      <tr><td>Hunny Chilly Potato</td><td>130</td></tr>
+
+      <!-- Shake -->
+      <tr><td rowspan="7">Shake</td><td>Mango Shake</td><td>80</td></tr>
+      <tr><td>Banana Shake</td><td>80</td></tr>
+      <tr><td>Papaya Shake</td><td>80</td></tr>
+      <tr><td>Oreo Shake</td><td>100</td></tr>
+      <tr><td>Chocolate Shake</td><td>120</td></tr>
+      <tr><td>Strawberry Shake</td><td>80</td></tr>
+      <tr><td>Pineapple Shake</td><td>80</td></tr>
+
+      <!-- Pizza -->
+      <tr><td rowspan="6">Pizza</td><td>Normal Pizza</td><td>120</td></tr>
+      <tr><td>Vegetables Pizza</td><td>130</td></tr>
+      <tr><td>Sweet Corn Pizza</td><td>150</td></tr>
+      <tr><td>Paneer Pizza</td><td>180</td></tr>
+      <tr><td>Tandoori Pizza</td><td>180</td></tr>
+      <tr><td>Special Pizza</td><td>250</td></tr>
+
+      <!-- Sandwich -->
+      <tr><td rowspan="6">Sandwich</td><td>Mix Veg Sandwich</td><td>80-120</td></tr>
+      <tr><td>Mix Veg Tandoori Paneer Sandwich</td><td>100-150</td></tr>
+      <tr><td>Grilled Sandwich</td><td>100-150</td></tr>
+      <tr><td>Paneer Grilled Sandwich</td><td>120-150</td></tr>
+      <tr><td>Mix Veg. Grilled Sandwich</td><td>110-160</td></tr>
+      <tr><td>Cheeze Grilled Sandwich</td><td>150-160</td></tr>
+
+    </table>
+  </section>
+
+  <section id="about" class="page-section" style="display:none;">
+    <h2>About Big Boy Cafe</h2>
+    <p>"Big Boy Cafe & Party Hall is the finest venue to have a private party and have fun with your closest friends and family.</p>
+    <p>Their customer service team is excellent. When it comes to timely responses and helpful assistance, the team here excels.</p>
+    <p>Wonderful in flavour, their dishes can be enjoyed by anybody in the family, regardless of age. Ample space for parking."</p>
+  </section>
+
+  <section id="gallery" class="page-section" style="display:none;">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/01CDOiD.jpg" alt="Cafe Entrance" />
+      <img src="https://i.imgur.com/cHL9hdy.jpg" alt="Party Hall Event" />
+      <img src="https://i.imgur.com/YZHuF9H.jpg" alt="Birthday Decoration" />
+      <img src="https://i.imgur.com/fYDZFnk.jpg" alt="Cake 1" />
+      <img src="https://i.imgur.com/Tsl4Efz.jpg" alt="Cake 2" />
+      <img src="https://i.imgur.com/lEboW4Q.jpg" alt="Cafe Vibe" />
+    </div>
+  </section>
+
+  <section id="contact" class="page-section" style="display:none;">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Location:</strong> Link Road, above Sector 4, Sector 4, Rewari, Haryana 123401</p>
+      <p><strong>WhatsApp Contact No.:</strong> <a href="https://wa.me/919728161691" target="_blank">+91 97281 61691</a></p>
+      <p><strong>Nearby Landmark:</strong> FitRFashion, Sector 4, Rewari</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2024 Big Boy Cafe, Rewari</p>
+</footer>
+
+<script>
+  // Simple page navigation
+  function showPage(page) {
+    const sections = document.querySelectorAll('.page-section');
+    sections.forEach(sec => {
+      if (sec.id === page) {
+        sec.style.display = 'block';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  }
+
+  // Show home initially
+  showPage('home');
+</script>
+
+</body>
+</html>
